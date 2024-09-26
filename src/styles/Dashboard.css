@@ -1,0 +1,27 @@
+/* Centralizando a página do dashboard */
+.dashboard-container {
+    display: flex;
+    flex-direction: column; /* Alinha os elementos em coluna */
+    justify-content: center; /* Centraliza verticalmente */
+    align-items: center; /* Centraliza horizontalmente */
+    height: 100vh; /* Altura da página */
+    background-color: #f5f7fa; /* Fundo claro */
+    margin: 0;
+  }
+  
+  /* Estilos para o título */
+  .dashboard-container h2 {
+    font-size: 28px;
+    color: #34495e;
+    margin-bottom: 20px;
+    text-align: center; /* Centraliza o texto */
+  }
+  
+  /* Estilos para o texto */
+  .dashboard-container p {
+    font-size: 18px;
+    color: #7f8c8d;
+    margin-bottom: 40px;
+    text-align: center; /* Centraliza o texto */
+  }
+  

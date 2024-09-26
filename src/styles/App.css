@@ -1,0 +1,80 @@
+body {
+  background-color: #f8f9fa;
+  margin: 0;
+  padding: 0;
+  display: flex; /* Usar flexbox para organizar o conteúdo */
+  flex-direction: column; /* Colocar os filhos em coluna */
+  min-height: 100vh; /* Garantir que a altura mínima seja 100% da viewport */
+}
+
+.container {
+  margin-top: 30px;
+  flex: 1; /* Faz com que o container preencha o espaço disponível */
+}
+
+h2, h3 {
+  color: #343a40;
+}
+
+/* Remove margens e espaçamentos extras do navbar */
+.navbar, .navbar-collapse, .offcanvas-body {
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  margin-bottom: 0; /* Remove qualquer margem inferior */
+  transition: background-color 0.3s ease; /* Transição suave para a cor de fundo */
+}
+
+.navbar:hover {
+  background-color: #343a40; /* Alterar cor da navbar ao passar o mouse */
+}
+
+/* Estilos da Navbar */
+.navbar .nav-link {
+  transition: color 0.3s ease, transform 0.2s ease-in-out; /* Adiciona transições nos links */
+  color: #ffffff;
+  font-size: 1rem; /* Tamanho de fonte ajustado */
+}
+
+.navbar .nav-link:hover {
+  color: #007bff; /* Cor do link ao passar o mouse */
+  transform: scale(1.05); /* Aumenta o tamanho do link ao passar o mouse */
+}
+
+/* Estilo do botão de toggle da Navbar */
+.navbar .navbar-toggler {
+  transition: transform 0.2s ease-in-out; /* Animação no botão de toggle */
+}
+
+.navbar .navbar-toggler:hover {
+  transform: scale(1.05); /* Aumenta o tamanho do botão ao passar o mouse */
+}
+
+/* Responsividade adicional para ajustar a navbar no mobile */
+@media (max-width: 768px) {
+  .navbar-brand img {
+    width: 30px; /* Reduz tamanho do logo no mobile */
+    height: 30px;
+  }
+
+  .navbar .nav-link {
+    font-size: 0.9rem; /* Diminui o tamanho dos links no mobile */
+  }
+
+  .offcanvas-body {
+    padding: 1rem;
+    font-size: 1rem; /* Mantém legível no mobile */
+  }
+}
+
+/* Estilos para o Footer */
+.footer {
+  background-color: #343a40; /* Cor do fundo do footer */
+  color: #ffffff; /* Cor do texto */
+  padding: 1rem 0; /* Espaçamento interno do footer */
+  position: relative; /* Para o comportamento fixo */
+  width: 100%; /* Largura total */
+  bottom: 0; /* Para garantir que fique na parte inferior */
+}

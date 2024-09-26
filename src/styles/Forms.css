@@ -1,0 +1,113 @@
+/* Estilo para formulários */
+.event-form, .participant-form, .organizer-form {
+  background-color: #ffffff;
+  padding: 30px;
+  margin: 20px auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 400px;
+}
+
+.event-form h2, .participant-form h2, .organizer-form h2 {
+  color: #34495e;
+  text-align: center;
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+input {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 15px;
+  border: 1px solid #bdc3c7;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: border 0.3s ease;
+}
+
+input:focus {
+  border-color: #3498db;
+}
+
+button {
+  width: 100%;
+  padding: 15px;
+  background-color: #3498db;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul li {
+  background-color: #ecf0f1;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #bdc3c7;
+}
+
+ul li:hover {
+  background-color: #e0e4e8;
+}
+
+/* Botões principais */
+button {
+  padding: 12px 20px;
+  margin: 10px 0;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #2980b9;
+  transform: scale(1.05);
+}
+
+button:active {
+  transform: scale(1);
+}
+
+/* Responsividade adicional */
+@media (max-width: 768px) {
+  .event-form, .participant-form, .organizer-form {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .login-form {
+    width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  button {
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  input {
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  .navbar a {
+    font-size: 14px;
+  }
+}

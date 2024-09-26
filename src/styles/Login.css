@@ -1,0 +1,119 @@
+/* Página de Login com imagem de background */
+.login-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Garante que a página ocupe a altura total da viewport */
+  background-image: url('../images/background-image.jpg'); /* Caminho da imagem de fundo */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Efeito de overlay escuro sobre o background */
+.login-page::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* Efeito de overlay escuro */
+  z-index: 1; /* Coloca o overlay acima da imagem */
+}
+
+.login-form {
+  position: relative;
+  z-index: 2;
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  width: 100%; /* Mudado para 100% para ocupar todo o espaço disponível */
+  max-width: 400px; /* Aumenta um pouco a largura máxima para telas maiores */
+  text-align: center;
+}
+
+.login-form h2 {
+  color: #34495e;
+  font-size: 26px;
+  margin-bottom: 30px;
+}
+
+.login-form .input-group {
+  position: relative;
+}
+
+.login-form input {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid #bdc3c7;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.login-form input:focus {
+  border-color: #3498db;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Ajustes de ícone para alinhar com os inputs */
+.input-group .input-group-prepend .input-group-text {
+  background-color: #f1f1f1;
+  border: none;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.icon-size {
+  font-size: 1rem; /* Ajustando o tamanho do ícone para 1rem (equivalente a 16px) */
+  color: #999;
+}
+
+.login-form button {
+  width: 100%;
+  padding: 15px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease-in-out;
+}
+
+.login-form button:hover {
+  background-color: #2980b9;
+  transform: scale(1.05);
+}
+
+/* Estilo de link */
+.login-form a {
+  display: block;
+  margin-top: 15px;
+  color: #3498db;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.login-form a:hover {
+  color: #2980b9;
+}
+
+/* Ajuste para dispositivos menores */
+@media (max-width: 480px) {
+  .login-form {
+    padding: 20px;
+    width: 90%;
+  }
+
+  .login-form h2 {
+    font-size: 22px;
+  }
+}

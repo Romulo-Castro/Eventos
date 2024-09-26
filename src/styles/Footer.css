@@ -1,0 +1,18 @@
+.footer {
+  background-color: #343a40; /* Cor de fundo do footer */
+  color: white; /* Cor do texto */
+  text-align: center; /* Centraliza o texto */
+  padding: 10px 0; /* Espaçamento vertical */
+  position: fixed; /* Fixo na parte inferior */
+  bottom: 0; /* Ficar na parte inferior da página */
+  left: 0; /* Início da borda esquerda */
+  width: 100%; /* Largura total */
+  z-index: 1000; /* Garante que o footer fique acima de outros elementos */
+}
+
+/* Responsividade do footer */
+@media (max-width: 768px) {
+  .footer {
+    padding: 15px 0; /* Aumenta o padding para telas menores */
+  }
+}
