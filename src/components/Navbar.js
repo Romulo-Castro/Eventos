@@ -3,7 +3,7 @@ import { Navbar, Nav, Container, Offcanvas } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import logo from '../images/logo.png'; // Importe o logo
 
-const Header = () => {
+const Header = ({ isAuthenticated, onLogout }) => {
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
@@ -34,10 +34,22 @@ const Header = () => {
             </Offcanvas.Header>
             <Offcanvas.Body>
               <Nav className="justify-content-end flex-grow-1 pe-3">
-                <Nav.Link as={Link} to="/">Dashboard</Nav.Link>
-                <Nav.Link as={Link} to="/organizers">Organizadores</Nav.Link>
-                <Nav.Link as={Link} to="/events">Eventos</Nav.Link>
-                <Nav.Link as={Link} to="/participants">Participantes</Nav.Link>
+                {isAuthenticated ? (
+                  <>
+                    <Nav.Link as={Link} to="/">Dashboard</Nav.Link>
+                    <Nav.Link as={Link} to="/organizers">Organizadores</Nav.Link>
+                    <Nav.Link as={Link} to="/events">Eventos</Nav.Link>
+                    <Nav.Link as={Link} to="/participants">Participantes</Nav.Link>
+                    <Nav.Link onClick={onLogout} style={{ cursor: 'pointer', color: 'red' }}>
+                      Sair
+                    </Nav.Link>
+                  </>
+                ) : (
+                  <>
+                    <Nav.Link as={Link} to="/login">Login</Nav.Link>
+                    <Nav.Link as={Link} to="/register">Registrar</Nav.Link>
+                  </>
+                )}
               </Nav>
             </Offcanvas.Body>
           </Navbar.Offcanvas>

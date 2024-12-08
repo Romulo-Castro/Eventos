@@ -10,11 +10,11 @@ const LoginPage = ({ onLogin }) => {
         <div className="row justify-content-center">
           <div className="col-md-6 col-lg-4">
             <div className="login-form shadow p-4 rounded">
-              <h2 className="text-center mb-4">Faça seu Login</h2>
+              <h2 className="text-center mb-4">Bem-vindo de volta</h2>
               <LoginForm onLogin={onLogin} />
               <div className="text-center mt-3">
-                <a href="/recover-password" className="text-primary">Esqueceu sua senha?</a>
-                {/*Adicionaremos o componente posteriormente*/}
+                <a href="/forgot-password" className="text-primary d-block mb-2">Esqueceu sua senha?</a>
+                <a href="/register" className="text-primary">Não tem uma conta? Cadastre-se</a>
               </div>
             </div>
           </div>
