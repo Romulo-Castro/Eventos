@@ -1,0 +1,139 @@
+/* Página de Registro com imagem de background */
+.register-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Garante que a página ocupe a altura total da viewport */
+    background-image: url('../images/background-image.jpg'); /* Caminho da imagem de fundo */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* Efeito de overlay escuro sobre o background */
+  .register-page::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Efeito de overlay escuro */
+    z-index: 1; /* Coloca o overlay acima da imagem */
+  }
+  
+  .register-form {
+    position: relative;
+    z-index: 2;
+    background-color: rgba(255, 255, 255, 0.9); /* Fundo levemente translúcido */
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); /* Sombra sutil para destaque */
+    width: 100%;
+    max-width: 400px; /* Limita a largura máxima */
+    text-align: center;
+  }
+  
+  .register-form h2 {
+    color: #2c3e50;
+    font-size: 26px;
+    margin-bottom: 20px;
+  }
+  
+  .register-form .form-group {
+    margin-bottom: 20px;
+    text-align: left; /* Alinha rótulos e inputs à esquerda */
+  }
+  
+  .register-form .form-group label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #34495e;
+    margin-bottom: 8px;
+    display: block;
+  }
+  
+  .register-form input {
+    width: 100%;
+    padding: 12px;
+    font-size: 14px;
+    border: 1px solid #bdc3c7;
+    border-radius: 6px;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .register-form input:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 6px rgba(41, 128, 185, 0.5);
+  }
+  
+  /* Botão de registro */
+  .register-form button {
+    width: 100%;
+    padding: 12px;
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease-in-out;
+  }
+  
+  .register-form button:hover {
+    background-color: #219150;
+    transform: scale(1.05);
+  }
+  
+  /* Links adicionais */
+  .register-form a {
+    display: block;
+    margin-top: 15px;
+    color: #3498db;
+    text-decoration: none;
+    font-size: 14px;
+  }
+  
+  .register-form a:hover {
+    color: #1f639b;
+  }
+  
+  /* Responsividade */
+  @media (max-width: 768px) {
+    .register-form {
+      padding: 30px;
+      max-width: 90%;
+    }
+  
+    .register-form h2 {
+      font-size: 22px;
+    }
+  
+    .register-form button {
+      font-size: 14px;
+      padding: 10px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .register-form {
+      padding: 20px;
+    }
+  
+    .register-form h2 {
+      font-size: 18px;
+    }
+  
+    .register-form input {
+      padding: 10px;
+      font-size: 13px;
+    }
+  
+    .register-form button {
+      font-size: 13px;
+    }
+  }
+  
